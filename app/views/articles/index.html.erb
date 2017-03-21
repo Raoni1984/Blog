@@ -23,50 +23,13 @@
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
     <body>
 
-        <!-- Navigation -->
-        <nav class="navbar navbar-default navbar-custom navbar-fixed-top">
-            <div class="container-fluid">
-                <!-- Brand and toggle get grouped for better mobile display -->
-                <div class="navbar-header page-scroll">
-                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
-                        <span class="sr-only">Toggle navigation</span>
-                        Menu <i class="fa fa-bars"></i>
-                    </button>
-                    <a class="navbar-brand" href="index.html">Start Bootstrap</a>
-                </div>
-
-                <!-- Collect the nav links, forms, and other content for toggling -->
-                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
-                    <ul class="nav navbar-nav navbar-right">
-                        <li>
-                            <a href="index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="about.html">About</a>
-                        </li>
-                        <li>
-                            <a href="post.html">Sample Post</a>
-                        </li>
-                        <li>
-                            <a href="contact.html">Contact</a>
-                        </li>
-                    </ul>
-                </div>
-                <!-- /.navbar-collapse -->
-            </div>
-            <!-- /.container -->
-        </nav>
-
-        <!-- Page Header -->
-        <!-- Set your background image for this header on the line below. -->
-        <header class="intro-header" style="background-image: url('img/home-bg.jpg'); padding-top: 100px;">
+        <header class="intro-header" style="background-image: url('/img/CAPA_FACE_INNOVE.jpg'); padding-top: 100px; width: 100%;">
             <div class="container">
                 <div class="row">
                     <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
                         <div class="site-heading">
-                            <h1>Innove.me</h1>
+                            <h1 style="float: right; font-size: 3em; color: orange;">Innove.me</h1>
                             <hr class="small">
-                            <span class="subheading">A Clean Blog Theme by Start Bootstrap</span>
                         </div>
                     </div>
                 </div>
@@ -75,6 +38,37 @@
 
   <!-- Main Content -->
   <div class="container">
+    <!-- <div class="block custom-form">
+        <h2 class="title">
+            <span>Subscribe &amp; get our FREE eBook</span>
+            Build Your First Node.js App
+        </h2>
+        <div class="row baby-gutter">
+            <div class="col-xs-4">
+                <img src="/wp-content/uploads/2016/03/first-node-app-small.png" alt="Free Node Book">
+            </div>
+            <div class="col-xs-8">
+
+                <div id="mc_embed_signup">
+                <form action="https://scotch.us3.list-manage.com/subscribe/post?u=1c412c864c03eadaf07ccd61e&amp;id=a818d504d4" method="post" id="mc-embedded-subscribe-form" name="mc-embedded-subscribe-form" class="validate" target="_blank" novalidate="">
+
+                <input type="hidden" name="LOCATION" id="LOCATION" value="sidebar_fixed">
+
+                <div class="mc-field-group form-group">
+                    <input type="email" name="EMAIL" class="required email form-control" id="mce-EMAIL" placeholder="Email Address">
+                </div>
+                    <div id="mce-responses" class="clear">
+                        <div class="response" id="mce-error-response" style="display:none"></div>
+                        <div class="response" id="mce-success-response" style="display:none"></div>
+                    </div>
+                    <div style="position: absolute; left: -5000px;"><input type="text" name="b_1c412c864c03eadaf07ccd61e_a818d504d4" value=""></div>
+                    <div class="clear text-center"><input type="submit" value="Free Node Book" name="subscribe" id="mc-embedded-subscribe" class="button btn btn-primary btn-sm btn-block"></div>
+                </form>
+                </div>
+                
+            </div>
+        </div>
+    </div> -->
             <div class="row">
                 <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1 blog-content">
                   <div class="post-preview">
@@ -82,16 +76,17 @@
                       <tr>
                         <td><h2 class="post-title"><%= article.title %></h2></td>
                         <td><h3 class="post-subtitle"><%= article.text %></h3></td>
-                        <td><button class="btn btn-primary"><%= link_to 'Visualizar', article_path(article) %></button></td>
-                        <td><%= link_to 'Editar', edit_article_path(article) %></td>
-                        <td><%= link_to 'Deletar', article_path(article),
+                        <td><button class="btn btn-default"><%= link_to 'Visualizar', article_path(article) %></button></td>
+                        <td><button class="btn btn-warning"><%= link_to 'Editar', edit_article_path(article) %></button></td>
+                        <td><button class="btn btn-danger"><%= link_to 'Deletar', article_path(article),
                                 method: :delete,
-                                data: { confirm: 'Quer mesmo deletar o Post?' } %></td>
+                                data: { confirm: 'Quer mesmo deletar o Post?' } %></button></td>
                       </tr>
                     <% end %>
                   </div>
 
-                  <%= link_to 'Novo Post', new_article_path %>
+                  <p><button class="btn btn-primary"><%= link_to 'Novo Post', new_article_path %></button></p>
+
                   <div class="col-xs-12">
                     <div class="text-center">
                       <table>
@@ -106,3 +101,56 @@
                 </div>
               </div>
   </div>
+  <!-- Footer -->
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                  </ul>
+                  <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="js/clean-blog.min.js"></script>
+
+</body>
+
+</html>
