@@ -1,5 +1,5 @@
 class ArticlesController < ApplicationController
-  before_action :find_post, only: [:edit, :update, :show, :delete]
+  #before_action :find_post, only: [:edit, :update, :show, :delete]
   # Index action to render all posts
   def index
     @articles = Article.all
