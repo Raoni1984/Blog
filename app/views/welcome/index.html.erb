@@ -1,2 +1,301 @@
-<h1>Blog em Rails!</h1>
-<%= link_to 'Blog', controller: articles_path %>
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="utf-8" >
+
+	<title>Innove.Me</title>
+
+  <!-- Bootstrap Core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Theme CSS -->
+  <link href="vendor/assets/stylesheets/clean-blog.min.css" rel="stylesheet">
+
+  <!-- Custom Fonts -->
+  <link href="vendor/font-awesome/css/font-awesome.min.css" rel="stylesheet" type="text/css">
+  <link href='https://fonts.googleapis.com/css?family=Lora:400,700,400italic,700italic' rel='stylesheet' type='text/css'>
+  <link href='https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800' rel='stylesheet' type='text/css'>
+
+</head>
+
+<body>
+	<nav class="navbar navbar-default navbar-static-top" id="nav_wrapper">
+		<div class="container">
+			<div class="navbar-header">
+				<button type="button" class="navbar-toggle collapsed"
+					data-toggle="collapse" data-target="#navbar">
+				<!-- A classe sr-only só é exibida em leitor de tela para que pessoas
+					com deficiencia visual entendam o que há na tela -->
+					<span class="sr-only">Menu de Navegação</span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+					<span class="icon-bar"></span>
+				</button>
+				<!-- Logomarca ao lado esquerdo -->
+				<a class="navbar-brand" href="#">InNove</a>
+			</div>
+			<!-- Itens da navbar -->
+			<div id="navbar" class="navbar-collapse collapse">
+				<ul class="nav navbar-nav">
+					<li class="active"><a href="#carrossel">Home</a></li>
+					<li><a href="#conteudo">Cadastro</a></li>
+					<li class="dropdown">
+						<a href="#" class="dropdown-toggle" data-toggle="dropdown"
+							role="button" aria-haspopup="true"
+							aria-expanded="false">Ebooks <span class="caret"></span></a>
+						<ul class="dropdown-menu">
+							<li><a href="#">E-Book</a></li>
+							<li><a href="#">...E-book 1</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">E-book</a></li>
+							<li><a href="#">...E-book 2</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">E-book</a></li>
+							<li><a href="#">...E-book 3</a></li>
+							<li role="separator" class="divider"></li>
+							<li><a href="#">E-book</a></li>
+							<li><a href="#">...E-book 4</a></li>
+						</ul>
+					</li>
+				</ul>
+			</div><!-- fim .nav-collapse -->
+		</div><!-- fim .container -->
+	</nav>
+
+		<!-- Carrossel
+	================================================== -->
+	<div id="carrossel" class="carousel slide" data-ride="carousel">
+		<!-- Indicadores para mudar de imagem -->
+		<ol class="carousel-indicators">
+			<li data-target="#carrossel" data-slide-to="0" class="active"></li>
+			<li data-target="#carrossel" data-slide-to="1"></li>
+			<li data-target="#carrossel" data-slide-to="2"></li>
+			<li data-target="#carrossel" data-slide-to="3"></li>
+
+		</ol>
+
+		<div class="carousel-inner">
+			<!-- Primeira Imagem -->
+			<div class="item active">
+				<img class="first-slide" src="img/anuncio (1).jpg" alt="Primeiro Slide" />
+				<div class="container">
+					<div class="carousel-caption">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img class="second-slide" src="img/anuncio (2).jpg" alt="Página HTML5!!" />
+				<div class="container">
+					<div class="carousel-caption">
+
+					</div>
+				</div>
+			</div>
+
+			<div class="item">
+				<img class="third-slide" src="img/anuncio (3).jpg" alt="Aproveitem!" />
+				<div class="container">
+					<div class="carousel-caption">
+
+					</div>
+				</div>
+			</div>
+			<div class="item">
+				<img class="third-slide" src="img/anuncio (4).jpg" alt="Aproveitem!" />
+				<div class="container">
+					<div class="carousel-caption">
+
+					</div>
+				</div>
+			</div>
+		</div> <!-- fim carousel-inner -->
+
+		<!-- Setas para mudar imagem -->
+        <a class="left carousel-control" href="#carrossel" data-slide="prev">
+			<span class="glyphicon glyphicon-chevron-left"></span>
+			<span class="sr-only">Anterior</span>
+        </a>
+
+        <a class="right carousel-control" href="#carrossel" data-slide="next">
+			<span class="glyphicon glyphicon-chevron-right"></span>
+			<span class="sr-only">Próximo</span>
+        </a>
+
+	</div> <!-- fim carousel -->
+
+
+
+	<div class="container conteudo" id="conteudo_imagens">
+		<!-- Cabecalho da seção -->
+		<div class="row text-center titulo_secao" >
+			<div class="col-md-6 col-md-offset-3">
+				<!-- Título da seção -->
+				<h2 class="head-set">Aprenda sobre as tecnologias mais utilizadas atualmente</h2>
+				<!-- Sub-título da seção -->
+				<p>
+					Torne-se um profissional capaz de lidar com qualquer situação!
+				</p>
+        <button class="btn btn-primary"><%= link_to 'Blog', controller: articles_path %></button>
+			</div>
+		</div>
+
+		<div class="row text-center">
+            <!-- Primeiro Item -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ">
+                <img class="img-circle" src="img/3c.jpg" alt="Aumentem seus conhecimentos!"
+					width="240" height="240" />
+                <h2>Os 3 C's</h2>
+                <p>Você sabe quais são os 3 C’S dá credibilidade de um líder? !</p>
+                <p><a class="btn btn-success" href="#" >Ver Detalhes &raquo;</a></p>
+            </div>
+
+			 <!-- Segundo item -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ">
+                <img class="img-circle" src="img/lider.jpg" alt="Nosa página esta quase pronta!"
+					width="240" height="240">
+                <h2>Quer ser um Líder?</h2>
+                <p>Você está pronto para sua oportunidade?</p>
+                <p><a class="btn btn-primary" href="#" >Ver Detalhes &raquo;</a></p>
+            </div>
+
+            <!-- Terceiro item -->
+            <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4 ">
+                <img class="img-circle" src="img/gh.jpg" alt="Aprenda sobre isto!"
+					width="240" height="240">
+                <h2>Growth Hacking </h2>
+                <p>As vagas só aumentam pra essa área</p>
+                <p><a class="btn btn-danger" href="#" >Ver Detalhes &raquo;</a></p>
+            </div>
+
+
+		</div>
+	</div> <!-- fim #conteudo_imagens -->
+
+
+
+	<div class="container conteudo" id="conteudo_imagens">
+		<!-- Cabecalho da seção -->
+		<div class="row text-center titulo_secao" >
+			<div class="col-md-6 col-md-offset-3">
+				<!-- Título da seção -->
+				<h2 class="head-set">Fique atento s mudanças</h2>
+				<!-- Sub-título da seção -->
+				<h4>
+				<p align="justify">
+				O cotidiano agitado leva o consumidor a procurar mais praticidade! Enfrentar filas e se deslocar, fazem com que pensem duas vezes antes de comprar, em várias ocasiões até desistem.<br/>
+				Hoje, estar presente no mundo digital é uma obrigação! Ter apenas um site já não é o suficiente. Segundo dados do cuponomamia a penetração do mobile no e-commerce no Brasil cresceu 170% em 2016, enquanto o desktop cresceu apenas 50%.<br/>
+				O número de adeptos ao mobile cresce em ritmo acelerado graças a praticidade que essa plataforma traz, ter um app do seu negócio é o mesmo que facilitar a vida do seu consumidor! Você interage de forma pessoal com ele criando uma relação que vai além da venda, o que vai gerar mais fidelização e lucro para seu empreendimento!<br/>
+				</p>
+
+				</h4>
+			</div>
+		</div>
+
+	</div> <!-- fim #conteudo_imagens -->
+
+
+
+
+
+	<div class="container-fluid" id="background_icones">
+		<div class="container conteudo" id="conteudo_icones">
+			<!-- Cabecalho da seção -->
+			<div class="row text-center titulo_secao" >
+				<div class="col-md-6 col-md-offset-3">
+					<!-- Título da seção -->
+					<h2 class="head-set">Quer ter um app para o seu negócio é não sabe por onde começar?”</h2>
+					<!-- Sub-título da seção -->
+					<p>
+						 Baixe o nosso e-book gratuito “4 dicas práticas para ter o seu aplicativo e faturar mais".
+					</p>
+				</div>
+			</div>
+
+			<div class="row text-center" >
+				<!-- Primeira imagem do font awesome -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<span class="fa fa-cogs fa-5x"> </span>
+					<h2>Ebook 1</h2>
+					<p><a class="btn btn-default" href="#" >Ver Detalhes &raquo;</a></p>
+				</div>
+
+				<!-- Segunda imagem do font awesome -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<span class="fa fa-desktop fa-5x"> </span>
+					<span class="fa fa-mobile fa-5x"> </span>
+					<h2>Ebook 2</h2>
+					<p><a class="btn btn-default" href="#" >Ver Detalhes &raquo;</a></p>
+				</div>
+
+				<!-- Terceira imagem do fonte awesome -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<span class="fa fa-lock fa-5x"> </span>
+					<h2>Ebook 3</h2>
+					<p><a class="btn btn-default" href="#" >Ver Detalhes &raquo;</a></p>
+				</div>
+
+				<!-- Quarta imagem do fonte awesome -->
+				<div class="col-xs-12 col-sm-6 col-md-4 col-lg-3">
+					<span class="fa fa-cloud-download fa-5x"> </span>
+					<h2>Ebook 4</h2>
+					<p><a class="btn btn-default" href="#" >Ver Detalhes &raquo;</a></p>
+				</div>
+
+			</div>
+
+		</div>
+	</div>
+  <!-- Footer -->
+  <footer>
+      <div class="container">
+          <div class="row">
+              <div class="col-lg-8 col-lg-offset-2 col-md-10 col-md-offset-1">
+                  <ul class="list-inline text-center">
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-twitter fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-facebook fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                      <li>
+                          <a href="#">
+                              <span class="fa-stack fa-lg">
+                                  <i class="fa fa-circle fa-stack-2x"></i>
+                                  <i class="fa fa-github fa-stack-1x fa-inverse"></i>
+                              </span>
+                          </a>
+                      </li>
+                  </ul>
+                  <p class="copyright text-muted">Copyright &copy; Your Website 2016</p>
+              </div>
+          </div>
+      </div>
+  </footer>
+
+  <!-- jQuery -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+
+  <!-- Bootstrap Core JavaScript -->
+  <script src="vendor/bootstrap/js/bootstrap.min.js"></script>
+
+  <!-- Contact Form JavaScript -->
+  <script src="js/jqBootstrapValidation.js"></script>
+  <script src="js/contact_me.js"></script>
+
+  <!-- Theme JavaScript -->
+  <script src="js/clean-blog.min.js"></script></body>
+
+</html>
