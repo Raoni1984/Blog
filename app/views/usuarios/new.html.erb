@@ -1,0 +1,19 @@
+<h1>Preencha seus dados para ter acesso ao nosso material.</h1>
+<h2>Nós não enviamos spam em hipótese alguma. Seus dados nos ajudam
+a conhecer melhor quem são nossos visitantes e a notificá-los do lançamento novos materiais.</h2>
+<hr>
+<%= form_for @usuario do |f| -%>
+  Nome: <%= f.text_field :nome %><br>
+  Sobrenome: <%= f.text_field :sobrenome %><br>
+  Email: <%= f.text_field :email %><br>
+  Empresa: <%= f.text_field :nome_empresa %><br>
+  <%= f.submit %>
+<% end -%>
+<hr>
+Usuarios:<br>
+<% if !@usuarios.blank? %>
+    <% for item in @usuarios %>
+      <%= item.nome %> <%= item.sobrenome %> <br>
+    <% end %>
+  <% else %>
+<% end %>

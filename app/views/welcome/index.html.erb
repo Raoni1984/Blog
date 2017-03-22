@@ -123,22 +123,21 @@
 			<span class="glyphicon glyphicon-chevron-right"></span>
 			<span class="sr-only">Próximo</span>
         </a>
-
-	</div> <!-- fim carousel -->
-
-
+	</div>
+	<!-- fim carousel -->
 
 	<div class="container conteudo" id="conteudo_imagens">
 		<!-- Cabecalho da seção -->
 		<div class="row text-center titulo_secao" >
 			<div class="col-md-6 col-md-offset-3">
 				<!-- Título da seção -->
-				<h2 class="head-set">Aprenda sobre as tecnologias mais utilizadas atualmente</h2>
+				<h2 class="head-set">Aprenda sobre as tecnologias mais utilizadas atualmente!</h2>
 				<!-- Sub-título da seção -->
 				<p>
 					Torne-se um profissional capaz de lidar com qualquer situação!
 				</p>
-        <button class="btn btn-primary"><%= link_to 'Blog', controller: articles_path %></button>
+        <p><button class="btn btn-success"><%= link_to 'Leia Nossos e-books', controller: articles_path %></button></p>
+				<p><button class="btn btn-default"><%= link_to 'Cadastre-se e receba nosso material', new_usuario_path %></button></p>
 			</div>
 		</div>
 
